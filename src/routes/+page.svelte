@@ -1,2 +1,14 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+  import ReviewsList from "../components/ReviewsList/ReviewsList.svelte";
+
+  export let data;
+
+</script>
+
+
+<main class="md:container md:mx-auto">
+  <ReviewsList reviews={data.props.posts.toplists['575']} />
+</main>
+
+<style lang="postcss">
+</style>
