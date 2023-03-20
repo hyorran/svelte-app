@@ -3,7 +3,7 @@
   import { page } from "$app/stores";
 </script>
 
-<nav class="p-3 border-gray-200 rounded bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+<nav class="p-3 border-gray-200 rounded bg-gray-50">
   <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
     <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
       <ul

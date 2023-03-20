@@ -5,6 +5,9 @@
 
   export let reviews = [];
   export let draggable = false;
+  export let onDrop;
+
+  $: onDrop(reviews);
   let hovering = false;
 
   const drop = (event, target) => {
