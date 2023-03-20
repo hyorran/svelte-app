@@ -8,7 +8,7 @@
   <ReviewsList
     draggable={false}
     onDrop={() => null}
-    reviews={$ReviewsStore.toplists['575'].sort((a, b) => a.position - b.position)}
+    reviews={$ReviewsStore.toplists['575'].sort((a, b) => a?.position - b?.position)}
   />
 </main>
 

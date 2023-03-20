@@ -6,5 +6,5 @@
 
 </script>
 
-<h1>Position: {data.position}</h1>
-<div>Brand id: {data.brand_id}</div>
+<h1>Position: {data?.position}</h1>
+<div>Brand id: {data?.brand_id}</div>

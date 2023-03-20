@@ -9,8 +9,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const data = $ReviewsStore.toplists["575"].find((item) => item.brand_id === $page.params.slug);
   $$unsubscribe_page();
   $$unsubscribe_ReviewsStore();
-  return `<h1>Position: ${escape(data.position)}</h1>
-<div>Brand id: ${escape(data.brand_id)}</div>`;
+  return `<h1>Position: ${escape(data?.position)}</h1>
+<div>Brand id: ${escape(data?.brand_id)}</div>`;
 });
 export {
   Page as default
