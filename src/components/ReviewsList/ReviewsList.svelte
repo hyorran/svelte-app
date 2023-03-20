@@ -22,7 +22,8 @@
         <th class="content-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
           <div class="flex flex-wrap justify-center h-full flex-wrap">
             <img class="h-auto w-full max-w-lg mx-auto" alt="company-logo" src={review.logo} />
-            <a href={`/${review.brand_id}`}>Review</a>
+            <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+               href={`/${review.brand_id}`}>Review</a>
           </div>
         </th>
         <td class="px-6 py-4 content-center">
@@ -40,11 +41,12 @@
             <button
               type="button"
               class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+              href={review.play_url}
             >
               Play now
             </button>
           </div>
-          <!--          <span>{review.terms_and_conditions}</span>-->
+          <span class="text-with-link">{@html review.terms_and_conditions}</span>
         </td>
       </tr>
     {/each}
@@ -53,4 +55,8 @@
 </div>
 
 <style lang="postcss">
+    .text-with-link > :global(a) {
+        color: blue;
+        text-decoration: underline;
+    }
 </style>

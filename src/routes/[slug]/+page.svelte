@@ -1,6 +1,8 @@
 <script>
   export let data;
+
+  console.log(data);
 </script>
 
-<h1>{data.title}</h1>
-<div>{@html data.content}</div>
+<h1>Position: {data.props.posts.position}</h1>
+<div>Brand id: {data.props.posts.brand_id}</div>
