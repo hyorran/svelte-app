@@ -7,7 +7,7 @@
 
 
 <main class="md:container md:mx-auto">
-  <ReviewsList reviews={data.props.posts.toplists['575']} />
+  <ReviewsList draggable={false} reviews={data.props.posts.toplists['575']} />
 </main>
 
 <style lang="postcss">
