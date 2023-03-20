@@ -1,1 +1,0 @@
-async function e({fetch:s,params:o}){return{props:{posts:(await(await s("../data.json")).json()).toplists[575].find(t=>t.brand_id===o.slug)}}}const p=Object.freeze(Object.defineProperty({__proto__:null,load:e},Symbol.toStringTag,{value:"Module"}));export{p as _,e as l};

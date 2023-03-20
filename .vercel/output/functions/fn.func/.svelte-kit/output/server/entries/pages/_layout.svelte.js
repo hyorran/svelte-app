@@ -30,7 +30,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $ReviewsStore, $$unsubscribe_ReviewsStore;
   $$unsubscribe_ReviewsStore = subscribe(ReviewsStore, (value) => $ReviewsStore = value);
   let { data } = $$props;
-  set_store_value(ReviewsStore, $ReviewsStore = data.props.posts, $ReviewsStore);
+  set_store_value(ReviewsStore, $ReviewsStore = data?.props.posts, $ReviewsStore);
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
   $$unsubscribe_ReviewsStore();
