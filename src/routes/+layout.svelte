@@ -5,7 +5,7 @@
 
   export let data;
 
-  $ReviewsStore = data.props.posts;
+  $ReviewsStore = data?.props.posts;
 </script>
 
 <NavigationBar />

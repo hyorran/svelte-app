@@ -1,7 +1,10 @@
 <script>
-  export let data;
-  
+  import { ReviewsStore } from "../../Store.js";
+  import { page } from "$app/stores";
+
+  const data = $ReviewsStore.toplists["575"].find((item) => item.brand_id === $page.params.slug);
+
 </script>
 
-<h1>Position: {data.props.posts.position}</h1>
-<div>Brand id: {data.props.posts.brand_id}</div>
+<h1>Position: {data.position}</h1>
+<div>Brand id: {data.brand_id}</div>
