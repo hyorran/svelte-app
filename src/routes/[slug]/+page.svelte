@@ -1,7 +1,6 @@
 <script>
   export let data;
-
-  console.log(data);
+  
 </script>
 
 <h1>Position: {data.props.posts.position}</h1>
