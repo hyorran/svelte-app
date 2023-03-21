@@ -3,15 +3,13 @@
   import Rating from "../Rating.svelte";
   import { flip } from "svelte/animate";
 
-  export let reviews = [];
+  export let reviews;
   export let draggable = false;
   export let onDrop;
 
-  $: onDrop(reviews);
   let hovering = false;
 
   const drop = (event, target) => {
-
     event.dataTransfer.dropEffect = "move";
     const start = parseInt(event.dataTransfer.getData("text/plain"));
     const newTracklist = reviews;
@@ -25,6 +23,9 @@
     }
 
     reviews = newTracklist;
+    if (onDrop) {
+      onDrop(reviews);
+    }
     hovering = null;
   };
 
@@ -50,7 +51,7 @@
     <tbody>
     {#each reviews as review, index (review.brand_id)}
       <tr
-        animate:flip
+        animate:flip="{{duration: 200}}"
         draggable={draggable}
         on:dragstart={event => dragstart(event, index)}
         on:drop|preventDefault={event => drop(event, index)}
@@ -60,7 +61,7 @@
       >
         <th class="content-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
           <div class="flex flex-wrap justify-center h-full flex-wrap">
-            <img class="h-auto w-full max-w-lg mx-auto" alt="company-logo" src={review.logo} />
+            <img class="h-auto w-full max-w-lg mx-auto min-w-[100px]" alt="company-logo" src={review.logo} />
             <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                href={`/${review.brand_id}`}>Review</a>
           </div>
